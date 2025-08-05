@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
 # ============ Gemini Setup ============
-genai.configure(api_key="AIzaSyDg-nYA54jfBUywmGoHR8Kvsirt5Z6GhEk")  # Replace with env var if deploying
+genai.configure(api_key=st.secrets["Gemini_API_Key"])  # Replace with env var if deploying
 llm_model = genai.GenerativeModel("gemini-2.5-flash")
 
 # ============ Streamlit UI ============
